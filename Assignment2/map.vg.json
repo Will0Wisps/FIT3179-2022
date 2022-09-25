@@ -1,0 +1,38 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 450,
+    "title": "Prices of AirBnBs in New York",
+    "projection": {"type": "albersUsa"},
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/output.json",
+          "format": {"type": "topojson", "feature": "Village"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/Airbnb_Open_Data.csv"
+        },
+        "mark": {"type": "circle", "tooltip": {"content": "data"}},
+        "encoding": {
+          "longitude": {"field": "long", "type": "quantitative"},
+          "latitude": {"field": "lat", "type": "quantitative"},
+          "size": {
+            "field": "price",
+            "type": "quantitative",
+            "title": "Prices",
+            "scale": {"domain": [0, 1200]}
+          },
+          "color": {
+            "field": "service fee",
+            "type": "quantitative",
+            "title": "Services",
+            "scale": {"scheme": "reds"}
+          }
+        }
+      }
+    ]
+  }
