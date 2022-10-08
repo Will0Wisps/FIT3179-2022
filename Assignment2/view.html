@@ -6,15 +6,41 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
   
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="styles.css" media="all">
 
 
 </head>
 <body>
-  
-<div id="chloropeth"></div>
-<div id="bubble"></div>
+
+    <div class = "page">
+        <h2>Chart 1: Chloropeth Map</h2>
+            <!-- pure grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div id="chloropeth" class="vis-container"></div>
+                </div>
+            </div>
+            <!-- end pure grid group -->
+            <br>
+
+        <hr class = "hr3">
+
+        <h2>Chart 2: Bubble chart displaying prices and ratings</h2>
+            <!-- pure grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div id="bubble" class="vis-container"></div>
+                </div>
+            </div>
+            <!-- end pure grid group -->
+            <br>
+
+</div>
 
 <script type="text/javascript">
 
@@ -25,6 +51,7 @@
   var b_chart = "bubble.vg.json";
   vegaEmbed('#bubble', b_chart).then(function(result) {
   }).catch(console.error);
+  
 </script>
 
 </body>
