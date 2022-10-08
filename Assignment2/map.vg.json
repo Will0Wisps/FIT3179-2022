@@ -77,10 +77,6 @@
           "title": "Price",
 					"type": "quantitative",
 					"scale": {
-						// "domain": [
-						// 	550,
-						// 	700
-						// ],
 						"scheme": "reds"
 					}
 				},
@@ -94,18 +90,7 @@
 					},
 				]
 			}
-		},
-    {
-    "mark": "text",
-    "encoding": {
-      // 42.519713, -75.772864
-      // 40.730941, -73.912582
-      "text": {"title": "How Cringe", "type": "nominal", "datum": true},
-      "longitude": {"field": "a", "type": "quantitative"},
-      "latitude": {"field": "b", "type": "quantitative"},
-      "size": {"value": 2000000},
-      "opacity": {"value": 0.6}
-    }}
+		}
 	],
 	"config": {}
 }
