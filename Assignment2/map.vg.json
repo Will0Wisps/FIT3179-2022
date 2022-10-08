@@ -1,37 +1,111 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 450,
-    "title": "Prices of AirBnBs in New York",
-    "layer": [
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/Counties.json",
-          "format": {"type": "topojson", "feature": "Counties"}
-        },
-        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
-      },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/Airbnb_Open_Data.csv"
-        },
-        "mark": {"type": "circle", "tooltip": {"content": "data"}},
-        "encoding": {
-          "longitude": {"field": "long", "type": "quantitative"},
-          "latitude": {"field": "lat", "type": "quantitative"},
-          "size": {
-            "field": "price",
-            "type": "quantitative",
-            "title": "Prices",
-            "scale": {"domain": [0, 1200]}
-          },
-          "color": {
-            "field": "service_fee",
-            "type": "quantitative",
-            "title": "Services",
-            "scale": {"scheme": "reds"}
-          }
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"title": "Airbnb prices in NYC",
+	"width": "container",
+	"height": 500,
+	"params": [
+    {"name": "a", "value": 40.501941537179874},
+    {"name": "b", "value": -79.76233390360528},
+    {
+        "name": "stats_option",
+        "value": "meanprice",
+        "bind": {
+            "input": "select",
+            "options": [
+                "meanprice",
+                "minprice",
+                "maxprice",
+                "medianprice",
+                "meansprice",
+                "meanminnight",
+                "meannoofreviews",
+                "meanrevpermonth",
+                "meanrevnumber",
+                "mean365",
+                "number"
+            ],
+            "name": "Stat to show: "
         }
-      }
-    ]
-  }
+    }
+	],
+	"layer": [{
+			"data": {
+				"url": "https://raw.githubusercontent.com/deldersveld/topojson/master/countries/us-states/NY-36-new-york-counties.json",
+				"format": { "type": "topojson", "feature": "cb_2015_new_york_county_20m" }
+			},
+			"transform": [{
+				"calculate": "'Data is not available in ' + datum.properties.NAME",
+				"as": "note"
+			}],
+			"mark": {
+				"type": "geoshape",
+				"fill": "#ddd",
+				"stroke": "white",
+				"strokeWidth": 1
+        
+			},
+			"encoding": { "tooltip": { "field": "note" } }
+		},
+		{
+			"data": {
+				"url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/airbnbnew.csv"
+			},
+			"transform": [{
+					"lookup": "County",
+					"from": {
+						"data": {
+							"url": "https://raw.githubusercontent.com/deldersveld/topojson/master/countries/us-states/NY-36-new-york-counties.json",
+							"format": {
+								"type": "topojson",
+								"feature": "cb_2015_new_york_county_20m"
+							}
+						},
+						"key": "properties.NAME"
+					},
+					"as": "geo"
+				},
+        {
+        "calculate": "datum[stats_option]",
+        "as": "stats"
+        }
+			],
+			"mark": { "type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5 },
+			"encoding": {
+				"shape": { "field": "geo", "type": "geojson" },
+				"color": {
+					"field": "stats",
+          "title": "Price",
+					"type": "quantitative",
+					"scale": {
+						// "domain": [
+						// 	550,
+						// 	700
+						// ],
+						"scheme": "reds"
+					}
+				},
+				"tooltip": [
+					{ "field": "County", "type": "nominal"},
+					{
+						"field": "meanprice",
+						"type": "quantitative",
+						"title": "Chosen measure",
+						"format": ","
+					},
+				]
+			}
+		},
+    {
+    "mark": "text",
+    "encoding": {
+      // 42.519713, -75.772864
+      // 40.730941, -73.912582
+      "text": {"title": "How Cringe", "type": "nominal", "datum": true},
+      "longitude": {"field": "a", "type": "quantitative"},
+      "latitude": {"field": "b", "type": "quantitative"},
+      "size": {"value": 2000000},
+      "opacity": {"value": 0.6}
+    }}
+	],
+	"config": {}
+}
