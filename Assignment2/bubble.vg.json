@@ -73,7 +73,7 @@
             {"field": "neighbourhood", "title": "Neighbourhood", "type": "nominal"},
             {"field": "totalreviews", "title": "Total reviews", "type": "quantitative", "format": ","},
             {"field": "meanrevnumber", "title": "Avg Rating", "type": "quantitative", "format": ".2f"},
-            {"field": "meanprice", "title": "Avg Price", "type": "quantitative", "format": "$,.2f"},
+            {"field": "meanprice", "title": "Avg Price", "type": "quantitative", "format": "$,.2f"}
           ]
         }
       },
@@ -88,7 +88,7 @@
           "fontStyle": "italic"
         },
         "encoding": {
-          "text": {"field": "neighbourhood", "type": "nominal"},
+          "text": {"field": "neighbourhood", "type": "nominal"}
         }
       }
     ]
