@@ -1,0 +1,95 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 600,
+    "title": "Prices and Reviews of Queens, Kings and Bronx",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/county3.csv"
+    },
+    
+    "transform": [
+  
+      {
+        "calculate": "if(datum.neighbourhood == 'Little Neck', true, false)",
+        "as": "point"
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "meanprice",
+        "type": "quantitative",
+        "title": "Mean price",
+        "axis": {"tickCount": 7},
+        "scale": {"type": "linear", "domain": [1, 1000]}
+      },
+      "y": {
+        "field": "meanrevnumber",
+        "type": "quantitative",
+        "axis": {"tickCount": 6},
+        "scale": {"type": "linear", "domain": [1, 5]}
+      }
+    },
+    "layer": [
+      {
+        "selection": {
+          "counties_selection": {
+            "type": "multi", "fields": ["County"], "bind": "legend"
+          }
+        },
+        "mark": "circle",
+        "encoding": {
+          "size": {
+            "field": "totalreviews",
+            "type": "quantitative",
+            "scale": {
+              "type": "threshold",
+              "domain": [100, 1000, 10000, 100000],
+              "range": [20, 100, 300, 500]
+            },
+            "legend": {"format": ".1s"}
+          },
+          "color": {
+            "field": "County",
+            "type": "nominal",
+            "scale": {
+              "domain": [
+                "Bronx",
+                "Kings",
+                "Queens"
+              ],
+              "range": [
+                "#e41a1c",
+                "#984ea3",
+                "#ff7f00"
+              ]
+            }
+          },
+          "opacity": {
+            "condition": {"selection": "counties_selection", "value": 0.8},
+            "value": 0.2
+          },
+          "tooltip": [
+            {"field": "County", "type": "nominal"},
+            {"field": "neighbourhood", "title": "Neighbourhood", "type": "nominal"},
+            {"field": "totalreviews", "title": "Total reviews", "type": "quantitative", "format": ","},
+            {"field": "meanrevnumber", "title": "Avg Rating", "type": "quantitative", "format": ".2f"},
+            {"field": "meanprice", "title": "Avg Price", "type": "quantitative", "format": "$,.2f"},
+          ]
+        }
+      },
+      {
+        "transform": [{"filter": "datum.point == true"}],
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "middle",
+          "dx": -12,
+          "fontSize": 11.5,
+          "fontStyle": "italic"
+        },
+        "encoding": {
+          "text": {"field": "neighbourhood", "type": "nominal"},
+        }
+      }
+    ]
+  }
