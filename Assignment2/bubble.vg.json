@@ -10,7 +10,7 @@
     "transform": [
   
       {
-        "calculate": "if(datum.neighbourhood == 'Little Neck', true, false)",
+        "calculate": "if(datum.neighbourhood == \"Little Neck\", true, false)",
         "as": "point"
       }
     ],
