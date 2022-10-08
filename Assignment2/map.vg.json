@@ -30,7 +30,7 @@
 	],
 	"layer": [{
 			"data": {
-				"url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/blob/main/Assignment2/NY-36-new-york-counties.json",
+				"url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/NY-36-new-york-counties.json",
 				"format": { "type": "topojson", "feature": "cb_2015_new_york_county_20m" }
 			},
 			"transform": [{
@@ -54,7 +54,7 @@
 					"lookup": "County",
 					"from": {
 						"data": {
-							"url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/blob/main/Assignment2/NY-36-new-york-counties.json",
+							"url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/NY-36-new-york-counties.json",
 							"format": {
 								"type": "topojson",
 								"feature": "cb_2015_new_york_county_20m"
