@@ -16,6 +16,11 @@
                 "meansfee",
                 "number"
             ],
+			"title": [
+				"Average price",
+				"Average service fees",
+				"Count"
+			],
             "name": "Stat to show: "
         }
     }
@@ -77,7 +82,21 @@
 					{
 						"field": "meanprice",
 						"type": "quantitative",
-						"title": "Chosen measure",
+						"title": "Average price",
+						"format": ","
+					},
+					{ "field": "County", "type": "nominal"},
+					{
+						"field": "meansfee",
+						"type": "quantitative",
+						"title": "Average service fees",
+						"format": ","
+					},
+					{ "field": "County", "type": "nominal"},
+					{
+						"field": "number",
+						"type": "quantitative",
+						"title": "Count",
 						"format": ","
 					}
 				]
