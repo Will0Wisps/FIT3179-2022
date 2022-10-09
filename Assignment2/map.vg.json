@@ -81,14 +81,14 @@
 						"field": "meanprice",
 						"type": "quantitative",
 						"title": "Average price",
-						"format": ","
+						"format": "$,.2f"
 					},
 					{ "field": "County", "type": "nominal"},
 					{
 						"field": "meansfee",
 						"type": "quantitative",
 						"title": "Average service fees",
-						"format": ","
+						"format": "$,.2f"
 					}
 				]
 			}
