@@ -13,15 +13,7 @@
             "input": "select",
             "options": [
                 "meanprice",
-                "minprice",
-                "maxprice",
-                "medianprice",
-                "meansprice",
-                "meanminnight",
-                "meannoofreviews",
-                "meanrevpermonth",
-                "meanrevnumber",
-                "mean365",
+                "meansfee",
                 "number"
             ],
             "name": "Stat to show: "
