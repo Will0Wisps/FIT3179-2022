@@ -71,7 +71,7 @@
 				"shape": { "field": "geo", "type": "geojson" },
 				"color": {
 					"field": "stats",
-          "title": "Price",
+          "title": "Chosen Statistic",
 					"type": "quantitative",
 					"scale": {
 						"scheme": "reds"
