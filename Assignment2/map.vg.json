@@ -71,7 +71,7 @@
 				"shape": { "field": "geo", "type": "geojson" },
 				"color": {
 					"field": "stats",
-          "title": "Chosen Statistic",
+          "title": "Chosen linebreak Statistic",
 					"type": "quantitative",
 					"scale": {
 						"scheme": "reds"
@@ -103,5 +103,5 @@
 			}
 		}
 	],
-	"config": {}
+	"config": {"lineBreak": "linebreak"}
 }
