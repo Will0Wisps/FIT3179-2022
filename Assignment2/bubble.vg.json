@@ -4,7 +4,7 @@
     "height": 600,
     "title": "Prices and Reviews of Queens, Kings and Bronx",
     "data": {
-      "url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/county3.csv"
+      "url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/county4.csv"
     },
     
     "transform": [
@@ -55,12 +55,14 @@
               "domain": [
                 "Bronx",
                 "Kings",
-                "Queens"
+                "Queens",
+                "New York"
               ],
               "range": [
                 "#e41a1c",
                 "#984ea3",
-                "#ff7f00"
+                "#ff7f00",
+                "#a6cee3"
               ]
             }
           },

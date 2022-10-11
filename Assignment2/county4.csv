@@ -1,0 +1,173 @@
+"County","neighbourhood","totalreviews","meanrevnumber","meanprice"
+"Bronx","Allerton",4966,3.27,680.86
+"Bronx","Baychester",1138,3.41,500.67
+"Bronx","Bronxdale",1530,3.16,562.47
+"Bronx","Castle Hill",607,2.75,308
+"Bronx","City Island",2004,3.69,647.25
+"Bronx","Claremont Village",862,3.45,658.76
+"Bronx","Clason Point",973,3.56,604.93
+"Bronx","Co-op City",93,4.4,527.6
+"Bronx","Concourse",5327,3.12,693.42
+"Bronx","Concourse Village",1906,3.36,525.51
+"Bronx","East Morrisania",993,3.15,786.95
+"Bronx","Edenwald",663,3.42,597.31
+"Bronx","Fieldston",321,3.29,710.08
+"Bronx","Fordham",3141,3.28,644.25
+"Bronx","Highbridge",2470,3.11,713.07
+"Bronx","Hunts Point",711,3.23,607.26
+"Bronx","Kingsbridge",3800,3.32,572.84
+"Bronx","Longwood",4168,3.36,674.25
+"Bronx","Morris Heights",1043,3.18,688.41
+"Bronx","Morris Park",938,3.1,706.68
+"Bronx","Morrisania",628,3.82,598.59
+"Bronx","Mott Haven",5990,3.43,618.43
+"Bronx","Mount Eden",1001,3.88,650.75
+"Bronx","North Riverdale",542,3.68,699.37
+"Bronx","Olinville",462,3.19,723.12
+"Bronx","Parkchester",3445,3.23,651.84
+"Bronx","Pelham Bay",1485,3.29,706.53
+"Bronx","Pelham Gardens",3169,3.3,609.18
+"Bronx","Port Morris",2648,3.23,574.57
+"Bronx","Riverdale",528,2.92,822.42
+"Bronx","Soundview",1421,3.35,622.32
+"Bronx","Spuyten Duyvil",101,3,314.12
+"Bronx","Throgs Neck",2789,3.43,680.32
+"Bronx","Tremont",769,3.5,550.79
+"Bronx","Unionport",578,3.84,562
+"Bronx","University Heights",1753,3.34,671.34
+"Bronx","Van Nest",765,3.36,607.18
+"Bronx","Wakefield",5282,3.37,631.43
+"Bronx","West Farms",31,4,463.17
+"Bronx","Westchester Square",559,3.59,580.14
+"Bronx","Williamsbridge",3141,3.46,642.36
+"Bronx","Woodlawn",1438,3.3,572.63
+"Kings","Bath Beach",1557,3.19,765.33
+"Kings","Bay Ridge",8757,3.2,614.14
+"Kings","Bedford-Stuyvesant",264273,3.29,624.05
+"Kings","Bensonhurst",4984,3.29,584.92
+"Kings","Bergen Beach",929,2.88,580.85
+"Kings","Boerum Hill",10276,3.25,618.48
+"Kings","Borough Park",5211,3.45,608.54
+"Kings","Brighton Beach",3713,3.33,686.22
+"Kings","Brooklyn Heights",6077,3.09,599.99
+"Kings","Brownsville",4939,3.51,679.84
+"Kings","Bushwick",119397,3.27,631.69
+"Kings","Canarsie",17038,3.4,622.27
+"Kings","Carroll Gardens",15019,3.25,642.65
+"Kings","Clinton Hill",31565,3.2,633.53
+"Kings","Cobble Hill",6283,3.19,637.58
+"Kings","Columbia St",1948,3.4,713.53
+"Kings","Coney Island",1799,3.02,695.4
+"Kings","Crown Heights",86335,3.29,623.65
+"Kings","Cypress Hills",11475,3.33,623.8
+"Kings","Downtown Brooklyn",3442,3.43,623.65
+"Kings","DUMBO",3677,2.81,558.62
+"Kings","Dyker Heights",849,3.09,617.74
+"Kings","East Flatbush",33986,3.32,642.81
+"Kings","East New York",21493,3.32,613.57
+"Kings","Flatbush",31334,3.27,650.75
+"Kings","Flatlands",6020,3.12,638.26
+"Kings","Fort Greene",22965,3.18,616.43
+"Kings","Fort Hamilton",2368,3.59,556.64
+"Kings","Gerritsen Beach",148,4.33,694.33
+"Kings","Gowanus",18065,3.2,647.5
+"Kings","Gravesend",3598,3.42,702.64
+"Kings","Greenpoint",42093,3.19,615.07
+"Kings","Manhattan Beach",1228,2.45,647.15
+"Kings","Midwood",4621,3.49,589.36
+"Kings","Mill Basin",200,3.79,775.14
+"Kings","Navy Yard",595,3.11,501.04
+"Kings","Park Slope",32046,3.24,601.99
+"Kings","Prospect-Lefferts Gardens",34488,3.29,639.34
+"Kings","Prospect Heights",23022,3.15,665.47
+"Kings","Red Hook",6440,3.11,632.44
+"Kings","Sea Gate",52,2.83,548.58
+"Kings","Sheepshead Bay",9746,3.25,631.55
+"Kings","South Slope",20459,3.2,648.51
+"Kings","Sunset Park",21358,3.16,634.98
+"Kings","Vinegar Hill",1219,3.16,614.21
+"Kings","Williamsburg",181622,3.25,624.31
+"Kings","Windsor Terrace",10671,3.1,592.29
+"New York","Battery Park City",1489,3.02,628.03
+"New York","Chelsea",56366,3.27,626.84
+"New York","Chinatown",21251,3.19,626.6
+"New York","Civic Center",1544,3.35,652.06
+"New York","East Harlem",78926,3.31,623.44
+"New York","East Village",92036,3.27,621.98
+"New York","Financial District",21298,3.45,619.48
+"New York","Flatiron District",3949,3.31,632.91
+"New York","Gramercy",15676,3.27,612.41
+"New York","Greenwich Village",12938,3.23,647.09
+"New York","Harlem",169845,3.24,627.52
+"New York","Hell's Kitchen",107201,3.29,618.45
+"New York","Inwood",11075,3.19,656.02
+"New York","Kips Bay",12935,3.38,614.81
+"New York","Little Italy",6168,3.19,615.35
+"New York","Lower East Side",50868,3.34,623.43
+"New York","Marble Hill",540,3.18,486.68
+"New York","Midtown",54760,3.32,608.17
+"New York","Morningside Heights",7981,3.2,632.82
+"New York","Murray Hill",10399,3.37,623.42
+"New York","NoHo",2335,3.25,680.85
+"New York","Nolita",12058,3.17,641.06
+"New York","Roosevelt Island",3197,3.38,623.64
+"New York","SoHo",18126,3.3,640.83
+"New York","Stuyvesant Town",746,3.3,685.13
+"New York","Theater District",13082,3.38,644.86
+"New York","Tribeca",4564,3.24,621.54
+"New York","Two Bridges",4197,3.37,635.59
+"New York","Upper East Side",67878,3.25,620.76
+"New York","Upper West Side",75025,3.22,620.84
+"New York","Washington Heights",37546,3.27,599.81
+"New York","West Village",31503,3.24,641.86
+"Queens","Arverne",7604,3.21,652.69
+"Queens","Astoria",48530,3.24,638.6
+"Queens","Bay Terrace",281,3.71,594.71
+"Queens","Bayside",3667,3.23,590.61
+"Queens","Bayswater",564,3.34,625.48
+"Queens","Belle Harbor",915,3.08,586.12
+"Queens","Bellerose",394,3.32,649.11
+"Queens","Breezy Point",28,2.86,368
+"Queens","Briarwood",3206,3.61,723.11
+"Queens","Cambria Heights",2357,3.32,708.28
+"Queens","College Point",1494,3.43,714.67
+"Queens","Corona",5116,3.24,624.14
+"Queens","Ditmars Steinway",19737,3.38,644.69
+"Queens","Douglaston",514,3,505.05
+"Queens","East Elmhurst",42632,3.34,668.16
+"Queens","Edgemere",518,3.17,625.42
+"Queens","Elmhurst",14543,3.32,629.04
+"Queens","Far Rockaway",1652,3.59,604.12
+"Queens","Flushing",40267,3.29,629.17
+"Queens","Forest Hills",7465,3.42,598.44
+"Queens","Fresh Meadows",4007,3.07,547.96
+"Queens","Glen Oaks",59,4.5,550.5
+"Queens","Glendale",3793,3.01,667.27
+"Queens","Hollis",561,3.53,500
+"Queens","Holliswood",52,3.6,502.4
+"Queens","Howard Beach",1980,3.35,509.6
+"Queens","Jackson Heights",16141,3.31,640.29
+"Queens","Jamaica",30359,3.37,618.33
+"Queens","Jamaica Estates",1591,3.62,627.15
+"Queens","Jamaica Hills",291,2.7,800.25
+"Queens","Kew Gardens",1093,3.48,630.42
+"Queens","Kew Gardens Hills",1171,3.25,676.34
+"Queens","Laurelton",1630,3.34,584.9
+"Queens","Little Neck",40,4.33,906.33
+"Queens","Maspeth",6988,3.32,611.27
+"Queens","Middle Village",2153,3.12,566.6
+"Queens","Neponsit",115,3.57,632
+"Queens","Ozone Park",4582,3.54,658.6
+"Queens","Queens Village",5710,3.22,649.35
+"Queens","Rego Park",7587,3.34,619.77
+"Queens","Richmond Hill",7039,3.39,551.67
+"Queens","Ridgewood",19056,3.38,634.9
+"Queens","Rockaway Beach",7412,3.31,648.76
+"Queens","Rosedale",5504,3.54,605.24
+"Queens","South Ozone Park",5743,3.39,600.02
+"Queens","Springfield Gardens",18615,3.35,625.76
+"Queens","St. Albans",9103,3.49,612.96
+"Queens","Sunnyside",20497,3.38,606.12
+"Queens","Whitestone",664,3.37,590.16
+"Queens","Woodhaven",7275,3.33,631.76
+"Queens","Woodside",12245,3.39,638.9
