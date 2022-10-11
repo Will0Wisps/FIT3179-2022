@@ -15,7 +15,10 @@
     "mark": "bar",
     "encoding": {
       "x": { "field": "County", "type": "ordinal" },
-      "y": { "field": "Avg Review", "type": "quantitative" },
+      "y": { "field": "Avg Review", 
+      "type": "quantitative", 
+      "scale": {"domain": [0,5]} 
+    },
       "xOffset": {"field": "room type"},
       "color": {"field": "room type"}
     }
