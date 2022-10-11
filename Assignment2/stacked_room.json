@@ -1,0 +1,22 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/airbnb2.csv"
+    },
+    "transform": [
+      {
+        "filter": "indexof([\"Kings\", \"New York\", \"Bronx\", \"Queens\"], datum.County) >= 0"
+      },
+      {
+        "aggregate": [{"op": "average", "field": "review rate number", "as": "Avg Review"}],
+        "groupby": ["County", "room type"]
+      }
+    ],  
+    "mark": "bar",
+    "encoding": {
+      "x": { "field": "County", "type": "ordinal" },
+      "y": { "field": "Avg Review", "type": "quantitative" },
+      "xOffset": {"field": "room type"},
+      "color": {"field": "room type"}
+    }
+  }
