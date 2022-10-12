@@ -23,7 +23,7 @@
       },
       "xOffset": {"field": "cancellation_policy"},
       "color": {"field": "cancellation_policy", 
-      "scale": {"range": ["#F00", "#0F0", "#00F"]}
+      "scale": {"range": ["#7DAA92", "#80FFEC", "#C2FBEF"]}
       }
     }
   }
