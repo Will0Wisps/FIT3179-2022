@@ -18,7 +18,8 @@
     ],
     "mark": {"type": "arc", "tooltip": true},
     "encoding": {
-      "theta": {"field": "no_listing", "title": "Count", "type": "quantitative"},
+      "theta": {"field": "no_listing", "type": "quantitative"},
+      "title": "Count",
       "color": {"field": "County", "type": "nominal", 
         "scale": {
           "range": ["#4E79A7",
