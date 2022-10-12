@@ -8,18 +8,17 @@
     "transform": [
       {
         "aggregate": [
-          {"op": "count", "field": "id", "as": "no_listing"}
+          {"op": "count", "field": "id", "as": "Count"}
           ],
         "groupby": ["County"]
       },
       {
-        "calculate": "if(datum.no_listing >= 1000, datum.County, \"other\")", "as":"County"
+        "calculate": "if(datum.Count >= 1000, datum.County, \"other\")", "as":"County"
       }
     ],
     "mark": {"type": "arc", "tooltip": true},
     "encoding": {
-      "theta": {"field": "no_listing", "type": "quantitative"},
-      "title": "Count",
+      "theta": {"field": "Count", "type": "quantitative"},
       "color": {"field": "County", "type": "nominal", 
         "scale": {
           "range": ["#4E79A7",
@@ -31,7 +30,7 @@
         }
       },
       "order": {
-        "field": "no_listing",
+        "field": "Count",
         "type": "quantitative",
         "sort": "descending"
       }
