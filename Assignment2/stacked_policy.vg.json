@@ -23,7 +23,7 @@
       },
       "xOffset": {"field": "cancellation_policy"},
       "title": "Cancellation Policy Rule",
-      "color": {"field": "cancellation_policy", "title": "Cancellation Policy Rule"},
+      "color": {"field": "cancellation_policy"},
       "scale": {"range": ["#7DAA92", "#80FFEC", "#C2FBEF"]}
       }
     }
