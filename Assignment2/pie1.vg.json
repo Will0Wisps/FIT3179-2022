@@ -21,11 +21,11 @@
       "theta": {"field": "no_listing", "type": "quantitative"},
       "color": {"field": "County", "type": "nominal", 
         "scale": {
-          "range": ["#F7ACCF",
-          "#E8F0FF",
-          "#7A5C61",
-          "#6874E8",
-          "#392759", 
+          "range": ["#4E79A7",
+          "#F28E2B",
+          "#59A14F",
+          "#E15759",
+          "#76B7B2",
           "#808080"]
         }
       },
