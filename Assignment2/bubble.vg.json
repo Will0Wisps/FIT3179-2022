@@ -10,11 +10,6 @@
       {
         "calculate": "if(datum.neighbourhood == \"Little Neck\", true, false)",
         "as": "point"
-      },
-
-      {
-        "calculate": "if(datum.neighbourhood == \"Glen Oaks\", true, false)",
-        "as": "point"
       }
     ],
     "encoding": {
