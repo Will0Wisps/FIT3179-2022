@@ -2,7 +2,6 @@
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"title": "Airbnb prices in NYC",
 	"width": "container",
-	"height":300,
 	"params": [
     {"name": "a", "value": 40.501941537179874},
     {"name": "b", "value": -79.76233390360528},
