@@ -1,0 +1,33 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple pie chart with embedded data.",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/airbnb2.csv"
+    },
+    "width": "container",
+    "transform": [
+      {
+        "aggregate": [
+          {"op": "count", "field": "id", "as": "no_listing"}
+          ],
+        "groupby": ["County"]
+      },
+      {
+        "calculate": "if(datum.no_listing >= 1000, datum.County, \"other\")", "as":"County"
+      }
+    ],
+    "mark": {"type": "arc", "tooltip": true},
+    "encoding": {
+      "theta": {"field": "no_listing", "type": "quantitative"},
+      "color": {"field": "County", "type": "nominal", 
+        "scale": {
+          "range": ["#7efa6e", "#9bde4c", "#aac234", "#afa627", "#ae8c24", "#a67327", "#995d2b", "#86492d", "#70382d", "#582a2a"]
+        }
+      },
+      "order": {
+        "field": "no_listing",
+        "type": "quantitative",
+        "sort": "descending"
+      }
+    }
+  }
