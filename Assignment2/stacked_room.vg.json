@@ -9,14 +9,14 @@
         "filter": "indexof([\"Kings\", \"New York\", \"Bronx\", \"Queens\"], datum.County) >= 0"
       },
       {
-        "aggregate": [{"op": "average", "field": "review rate number", "as": "Avg Review"}],
+        "aggregate": [{"op": "average", "field": "review rate number", "as": "Average Review"}],
         "groupby": ["County", "room type"]
       }
     ],  
     "mark": "bar",
     "encoding": {
       "x": { "field": "County", "type": "ordinal" },
-      "y": { "field": "Avg Review", 
+      "y": { "field": "Average Review", 
       "type": "quantitative", 
       "scale": {"domain": [0,5]} 
     },

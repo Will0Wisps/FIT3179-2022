@@ -16,15 +16,16 @@
       "x": {
         "field": "meanprice",
         "type": "quantitative",
-        "title": "Mean price",
+        "title": "Average Price",
         "axis": {"tickCount": 7},
-        "scale": {"type": "linear", "domain": [1, 1000]}
+        "scale": {"type": "linear", "domain": [200, 1000]}
       },
       "y": {
         "field": "meanrevnumber",
         "type": "quantitative",
+        "title": "Average Review",
         "axis": {"tickCount": 6},
-        "scale": {"type": "linear", "domain": [1, 5]}
+        "scale": {"type": "linear", "domain": [2, 5]}
       }
     },
     "layer": [
@@ -39,6 +40,7 @@
           "size": {
             "field": "totalreviews",
             "type": "quantitative",
+            "title": "Total Reviews",
             "scale": {
               "type": "threshold",
               "domain": [100, 1000, 10000, 100000],
@@ -66,14 +68,14 @@
           },
           "opacity": {
             "condition": {"selection": "counties_selection", "value": 0.8},
-            "value": 0.2
+            "value": 0.1
           },
           "tooltip": [
             {"field": "County", "type": "nominal"},
             {"field": "neighbourhood", "title": "Neighbourhood", "type": "nominal"},
             {"field": "totalreviews", "title": "Total reviews", "type": "quantitative", "format": ","},
-            {"field": "meanrevnumber", "title": "Avg Rating", "type": "quantitative", "format": ".2f"},
-            {"field": "meanprice", "title": "Avg Price", "type": "quantitative", "format": "$,.2f"}
+            {"field": "meanrevnumber", "title": "Average Review", "type": "quantitative", "format": ".2f"},
+            {"field": "meanprice", "title": "Average Price", "type": "quantitative", "format": "$,.2f"}
           ]
         }
       },

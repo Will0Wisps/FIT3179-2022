@@ -9,7 +9,7 @@
         "filter": "indexof([\"Kings\", \"New York\", \"Bronx\", \"Queens\"], datum.County) >= 0"
       },
       {
-        "aggregate": [{"op": "average", "field": "review rate number", "as": "Avg Review"}],
+        "aggregate": [{"op": "average", "field": "review rate number", "as": "Average Review"}],
         "groupby": ["County", "cancellation_policy"]
       }
     ],  
@@ -17,11 +17,11 @@
     "encoding": {
       "x": { "field": "County", "type": "ordinal" },
       "y": { 
-        "field": "Avg Review", 
+        "field": "Average Review", 
         "type": "quantitative", 
         "scale": {"domain": [0,5]}
       },
-      "xOffset": {"field": "cancellation_policy"},
+      "xOffset": {"field": "cancellation_policy", "title": "Cancellation Policy Rule"},
       "color": {"field": "cancellation_policy", 
       "scale": {"range": ["#7DAA92", "#80FFEC", "#C2FBEF"]}
       }
