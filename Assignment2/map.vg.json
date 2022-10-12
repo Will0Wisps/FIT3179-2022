@@ -13,7 +13,8 @@
             "input": "select",
             "options": [
                 "meanprice",
-                "meansfee"
+                "meansfee",
+				"number"
             ],
 			"title": [
 				"Average price",
@@ -69,7 +70,7 @@
 				"shape": { "field": "geo", "type": "geojson" },
 				"color": {
 					"field": "stats",
-          "title": "Prices (USD)",
+          "title": "Chosen Measure",
 					"type": "quantitative",
 					"scale": {
 						"scheme": "reds"
@@ -89,6 +90,13 @@
 						"type": "quantitative",
 						"title": "Average service fees",
 						"format": "$,.2f"
+					},
+					{ "field": "County", "type": "nominal"},
+					{
+						"field": "number",
+						"type": "quantitative",
+						"title": "Count",
+						"format": ","
 					}
 				]
 			}

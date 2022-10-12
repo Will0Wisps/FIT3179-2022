@@ -10,57 +10,107 @@
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="styles.css" media="all">
 
 
 </head>
 <body>
-
-    <div class = "page">
-        <h2>Chart 1: Chloropeth Map</h2>
-            <!-- pure grid group -->
-            <div class="pure-g">
-                <div class="pure-u-1-1">
-                    <div id="choropleth" class="vis-container"></div>
-                </div>
-            </div>
-            <!-- end pure grid group -->
-            <br>
-
-        <hr class = "hr3">
-
-        <h2>Chart 2: Bubble chart displaying prices and ratings</h2>
-            <!-- pure grid group -->
-            <div class="pure-g">
-                <div class="pure-u-1-1">
-                    <div id="bubble" class="vis-container"></div>
-                </div>
-            </div>
-            <!-- end pure grid group -->
-            <br>
         
-            <hr class = "hr3">
+    <div class = "page">
+
+        <!-- Title of Visualisation -->
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+            <h1>A view into New York's Airbnbs</h1>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+        
+        <!-- First row: Choropleth Map -->
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <div class="description description-right">
+                    <h2> Main Airbnb hotspots </h2>
+                    <p> The map shown on the right analyses the main Airbnb hotspots and location separated by different counties. 
+                        From here, it can be seen that the main Airbnb data is sourced from areas nearby the New York county, mainly in areas of Bronx, Nassau, New York, Kings and Queens. 
+                        However, there are some sparse distributions of Airbnb's in the other counties such as Erie, Allegany, St. Lawrence and others. Looking at this distribution, it seems that Saratoga has the highest average price for Airbnb's across the
+                        whole of New York. However, this might be skewed due to the lack of data in these other counties. Among Queens, Kings, Bronx and New York counties, they all have a similar average Airbnb price ranging from a minimum average of $632.25 in New York
+                        to as high as $632.44 in Bronx.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pure-u-1-3">
+                <div id="choropleth" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+        <!-- Second row: Pie charts -->
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-4">
+                <div class="description description-left">
+                    <h2> Distribution of Airbnbs </h2>
+                    <p> From this pie chart we are able to visualise the distribution of Airbnb's across the data. From here, it can be observed that most of the Airbnb's listed are located in the New York, Kings, Queens, Bronx and Nassau counties, while the rest make up
+                        a small portion of the observations.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pure-u-1-5">
+                <div id="pie1" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+        
+        <!-- Second row: Bubble charts -->
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-6">
+                <div class="description description-right">
+                    <h2> Reviews and Price, Are they related? </h2>
+                    <p> The comparison between price and average rating seems to have no specific trend, rather than that, most Airbnb's seem to be clustering at the $630 price point and an average rating of 3.3 out of 5. Out of the 4 counties, New York is the one that
+                        has the least variance, having most of their Airbnb's tightly packed within that cluster. There are some neighbourhood groups in which seem to be outliers in the data, due to mainly low number of reviews. These are the annotated Little Neck and Glen Oats,
+                        having the highest average price and average rating respectively. Overall, this seems to suggest that the Airbnb market in New York has stayed consistent throughout all its counties, averaging at a price point of $630 and an average rating of 3.3.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pure-u-1-7">
+                <div id="bubble" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+
+        
+        <!-- pure grid group -->
+        <div class="pure-g">
 
         <h2>Chart 3: Stacked bar chart for top 4</h2>
-            <!-- pure grid group -->
-            <div class="pure-g">
-                <div class="pure-u-1-1">
-                    <div id="sbar1" class="vis-container"></div>
-                </div>
+            <div class="pure-u-1-8">
+                <div id="sbar1" class="vis-container"></div>
             </div>
-            <!-- end pure grid group -->
-            <br>
 
-        <h2>Chart 4: Stacked bar chart for top 4</h2>
-            <!-- pure grid group -->
-            <div class="pure-g">
-                <div class="pure-u-1-1">
-                    <div id="sbar2" class="vis-container"></div>
-                </div>
+            <div class="pure-u-1-9">
+                <div id="sbar2" class="vis-container"></div>
             </div>
-            <!-- end pure grid group -->
-            <br>
+        <p> Finally, after comparing prices and reviews, the above 2 grouped bar charts shows the relationship of the remaining 2 important variables, room type as well as cancellation policy for the chosen 4 counties, which are Bronx, Kings, New York, and Queens. This choice
+            was made due to most Airbnb's are located in these 4 counties throughout New York. The first chart indicates that hotel rooms seem to have the highest average ratings, and is even at a 5 rating for Queens. Furthermore, the missing bar in Bronx indicates that
+            Airbnb's in Bronx seem to be focused more on entire homes and apartments, private and or shared rooms, rather than luxury hotel rooms. Regarding cancellation policy, there is a slight difference between being moderate, flexible and strict for these 4 counties,
+            with moderate having slightly higher reviews in Kings, New York and Bronx.  </p>
+
+        </div>
+        <!-- end pure grid group -->
 
 </div>
 
@@ -68,6 +118,10 @@
 
   var c_map = "map.vg.json";
   vegaEmbed('#choropleth', c_map).then(function(result) {
+  }).catch(console.error);
+
+  var p1_chart = "stacked_policy.vg.json";
+  vegaEmbed('#pie1', p1_chart).then(function(result) {
   }).catch(console.error);
 
   var b_chart = "bubble.vg.json";
