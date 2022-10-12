@@ -21,7 +21,7 @@
       "scale": {"domain": [0,5]} 
     },
       "xOffset": {"field": "room type"},
-      "color": {"field": "room type"},
+      "color": {"field": "room type", "title": "Room Type"},
       "scale": {"range": ["#F7ACCF", "#E8F0FF", "#6874E8", "#392759"]}
     }
   }
