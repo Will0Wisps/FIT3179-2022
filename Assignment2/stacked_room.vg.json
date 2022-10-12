@@ -4,6 +4,7 @@
       "url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/airbnb2.csv"
     },
     "width": "container",
+    "height": "container",
     "transform": [
       {
         "filter": "indexof([\"Kings\", \"New York\", \"Bronx\", \"Queens\"], datum.County) >= 0"

@@ -1,11 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
     "title": "Prices and Reviews of Queens, Kings and Bronx",
     "data": {
       "url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/county4.csv"
     },
-    
+    "width": "container",
+    "height":"container",
     "transform": [
   
       {
