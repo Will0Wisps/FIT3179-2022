@@ -2,6 +2,8 @@
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"title": "Airbnb prices in NYC",
 	"width": "container",
+    "projection": {"scale": {"expr": "zoom_level"},
+    "center": {"expr": "center_to"}},
 	"params": [ 
     {
         "name": "stats_option",
@@ -10,21 +12,54 @@
             "input": "select",
             "options": [
                 "meanprice",
-                "meansfee",
-				"number"
+                "meansfee"
             ],
 			"title": [
 				"Average price",
 				"Average service fees"
 			],
+            "labels": ["Average Price", "Average Service Fees"],
             "name": "Stat to show: "
         }
-    }
+    },
+    {
+            "name": "zoom_level",
+            "value": 6500,
+            "bind": {
+                "input": "range",
+                "min": 6000,
+                "max": 10000,
+                "step": 100,
+                "name": "Zoom: "
+            }
+        },
+        {
+            "name": "center_to",
+            "value": [-73.9, 40.9],
+            "bind": {
+                "input": "select",
+                "options": [
+                    [-78.4, 42.5],
+                    [-73.9, 40.9]
+                ],
+                "labels": ["Wyoming County", "New York County"],
+                "name": "Map Centre: "
+            }
+        }
 	],
-	"layer": [{
+	"layer": [
+        {
+      "data": 
+      {
+        "url": "https://raw.githubusercontent.com/edenfrey/FIT3179_Visualisation2_Globe500/main/js/world_map/oceans.topojson",
+        "format": {"type": "topojson", "feature": "oceans"}
+      },
+      "mark": {"type": "geoshape", "fill": "skyblue"}
+    },
+        {
 			"data": {
-				"url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/NY-36-new-york-counties.json",
-				"format": { "type": "topojson", "feature": "cb_2015_new_york_county_20m" }
+				"url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/overallnyc.json",
+				"format": { "type": "topojson", "feature": "ne_10m_admin_2_counties" }
 			},
 			"transform": [{
 				"calculate": "'Data is not available in ' + datum.properties.NAME",
@@ -47,10 +82,10 @@
 					"lookup": "County",
 					"from": {
 						"data": {
-							"url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/NY-36-new-york-counties.json",
+							"url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/overallnyc.json",
 							"format": {
 								"type": "topojson",
-								"feature": "cb_2015_new_york_county_20m"
+								"feature": "ne_10m_admin_2_counties"
 							}
 						},
 						"key": "properties.NAME"
@@ -67,10 +102,11 @@
 				"shape": { "field": "geo", "type": "geojson" },
 				"color": {
 					"field": "stats",
-          "title": "Chosen Measure",
+          "title": "Cost ($USD)",
 					"type": "quantitative",
 					"scale": {
-						"scheme": "reds"
+                        "type": "linear",
+						"scheme": "yelloworangered"
 					}
 				},
 				"tooltip": [
