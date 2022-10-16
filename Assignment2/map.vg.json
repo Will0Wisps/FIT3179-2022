@@ -2,7 +2,8 @@
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"title": "Airbnb prices in NYC",
 	"width": "container",
-	"height": 600,
+    "height": 400,
+    "view": {"fill": "skyblue"},
     "projection": {"scale": {"expr": "zoom_level"},
     "center": {"expr": "center_to"}},
 	"params": [ 
@@ -25,11 +26,11 @@
     },
     {
             "name": "zoom_level",
-            "value": 6500,
+            "value": 8000,
             "bind": {
                 "input": "range",
                 "min": 6000,
-                "max": 10000,
+                "max": 16000,
                 "step": 100,
                 "name": "Zoom: "
             }
