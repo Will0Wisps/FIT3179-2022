@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Average Reviews based on Cancellation Policy for each County",
+    "title": "Average Reviews based on Cancellation Policy per County",
     "data": {
       "url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/airbnb2.csv"
     },
