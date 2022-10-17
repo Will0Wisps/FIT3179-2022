@@ -130,7 +130,7 @@
 					{
 						"field": "number",
 						"type": "quantitative",
-						"title": "Count",
+						"title": "Number of Airbnbs",
 						"format": ","
 					}
 				]
