@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A simple pie chart with embedded data.",
+    "title": "Number of Airbnbs in each County",
     "data": {
       "url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/airbnb2.csv"
     },
@@ -18,7 +18,6 @@
     ],
     "mark": {"type": "arc", "tooltip": true},
     "encoding": {
-      "theta": {"field": "Count", "type": "quantitative"},
       "color": {"field": "County", "type": "nominal", 
         "scale": {
           "range": ["#4E79A7",
@@ -29,6 +28,7 @@
           "#808080"]
         }
       },
+      "theta": {"field": "Count", "title": "Number of Airbnbs", "type": "quantitative"},
       "order": {
         "field": "Count",
         "type": "quantitative",
