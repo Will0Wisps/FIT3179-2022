@@ -11,6 +11,10 @@ h5 {
     text-align: center;
 }
 
+p {
+    text-align: justify;
+}
+
 body {
     background-color: lightgray;
 	font-size: 14px;
