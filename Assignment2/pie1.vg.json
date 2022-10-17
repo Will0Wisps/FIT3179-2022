@@ -24,8 +24,8 @@
           "#F28E2B",
           "#59A14F",
           "#E15759",
-          "#76B7B2",
-          "#808080"]
+          "#808080",
+          "#76B7B2"]
         }
       },
       "theta": {"field": "Count", "title": "Number of Airbnbs (Percentage)", "type": "quantitative", "stack": "normalize"},
