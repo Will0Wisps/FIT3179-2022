@@ -51,6 +51,7 @@
           },
           "color": {
             "field": "County",
+            "title": "Filter by County",
             "type": "nominal",
             "scale": {
               "domain": [
