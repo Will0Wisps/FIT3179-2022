@@ -1,28 +1,33 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/airbnb2.csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Average Reviews based on Room Type for each County",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/airbnb2.csv"
+  },
+  "width": "container",
+  "transform": [
+    {
+      "filter": "indexof([\"Kings\", \"New York\", \"Bronx\", \"Queens\"], datum.County) >= 0"
     },
-    "width": "container",
-    "transform": [
-      {
-        "filter": "indexof([\"Kings\", \"New York\", \"Bronx\", \"Queens\"], datum.County) >= 0"
-      },
-      {
-        "aggregate": [{"op": "average", "field": "review rate number", "as": "Average Review"}],
-        "groupby": ["County", "room type"]
-      }
-    ],  
-    "mark": "bar",
-    "encoding": {
-      "x": { "field": "County", "type": "ordinal" },
-      "y": { "field": "Average Review", 
-      "type": "quantitative", 
-      "scale": {"domain": [0,5]} 
-    },
-      "xOffset": {"field": "room type"},
-      "color": {"field": "room type", "title": "Room Type",
-      "scale": {"range": ["#F7ACCF", "#E8F0FF", "#6874E8", "#392759"]}
+    {
+      "aggregate": [{"op": "average", "field": "review rate number", "as": "Average Review"}],
+      "groupby": ["County", "room type"]
     }
+  ],  
+  "mark": "bar",
+  "encoding": {
+    "x": { "field": "County", "type": "ordinal", "axis":{"labelAngle":-360} },
+    "y": { "field": "Average Review", 
+    "type": "quantitative", 
+    "scale": {"domain": [0,5]} 
+  },
+    "tooltip":[
+      {"field": "County", "type": "ordinal"}, 
+      {"field": "Average Review", "type": "quantitative", "format": ".2f"}
+    ],
+    "xOffset": {"field": "room type"},
+    "color": {"field": "room type", "title": "Room Type",
+    "scale": {"range": ["#F7ACCF", "#E8F0FF", "#6874E8", "#392759"]}
   }
+}
 }
