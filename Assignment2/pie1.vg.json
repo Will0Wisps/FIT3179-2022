@@ -13,7 +13,7 @@
         "groupby": ["County"]
       },
       {
-        "calculate": "if(datum.Count >= 1000, datum.County, \"other\")", "as":"County"
+        "calculate": "if(datum.Count >= 1000, datum.County, \"Other\")", "as":"County"
       }
     ],
     "mark": {"type": "arc", "tooltip": true},
@@ -28,7 +28,7 @@
           "#808080"]
         }
       },
-      "theta": {"field": "Count", "title": "Number of Airbnbs", "type": "quantitative", "stack": "normalize"},
+      "theta": {"field": "Count", "title": "Number of Airbnbs (Percentage)", "type": "quantitative", "stack": "normalize"},
       "order": {
         "field": "Count",
         "title": "Number of Airbnbs",
