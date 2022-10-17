@@ -16,13 +16,14 @@
   ],  
   "mark": "bar",
   "encoding": {
-    "x": { "field": "County", "type": "ordinal", "axis":{"labelAngle":-360} },
+    "x": { "field": "County", "type": "ordinal", "axis":{"labelAngle":-360}},
     "y": { "field": "Average Review", 
     "type": "quantitative", 
     "scale": {"domain": [0,5]} 
   },
     "tooltip":[
       {"field": "County", "type": "ordinal"}, 
+      {"field": "room type", "title":"Room Type", "type": "nominal"},
       {"field": "Average Review", "type": "quantitative", "format": ".2f"}
     ],
     "xOffset": {"field": "room type"},

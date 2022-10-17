@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Average Reviews based on Cancellation Policy for each County",
     "data": {
       "url": "https://raw.githubusercontent.com/Will0Wisps/FIT3179-2022/main/Assignment2/airbnb2.csv"
     },
@@ -15,12 +16,17 @@
     ],  
     "mark": "bar",
     "encoding": {
-      "x": { "field": "County", "type": "ordinal" },
+      "x": { "field": "County", "type": "ordinal","axis":{"labelAngle":-360}},
       "y": { 
         "field": "Average Review", 
         "type": "quantitative", 
         "scale": {"domain": [0,5]}
       },
+      "tooltip":[
+        {"field": "County", "type": "ordinal"}, 
+        {"field": "cancellation_policy", "title": "Cancellation Policy", "type": "nominal"},
+        {"field": "Average Review", "type": "quantitative", "format": ".2f"}
+      ],
       "xOffset": {"field": "cancellation_policy"},
       "color": {"field": "cancellation_policy", "title": "Cancellation Policy Rule",
       "scale": {"range": ["#7DAA92", "#80FFEC", "#C2FBEF"]}
