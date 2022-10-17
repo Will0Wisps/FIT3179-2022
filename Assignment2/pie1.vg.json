@@ -28,9 +28,10 @@
           "#808080"]
         }
       },
-      "theta": {"field": "Count", "title": "Number of Airbnbs", "type": "quantitative"},
+      "theta": {"field": "Count", "title": "Number of Airbnbs", "type": "quantitative", "stack": "normalize"},
       "order": {
         "field": "Count",
+        "title": "Number of Airbnbs",
         "type": "quantitative",
         "sort": "descending"
       }
